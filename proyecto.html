@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroTech - Tu tienda de tecnología</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Electro<span>Tech</span></a>
+        
+        <nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-icons">
+            <div class="cart-icon" onclick="mostrarCarrito()">
+                🛒 <span class="cart-count" id="cart-count">0</span>
+            </div>
+    
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+        </div>
+    </header>
+
+    <main>
+       
+        <section id="inicio" class="hero">
+     
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>Tecnología al alcance de tus manos</h2>
+                    <p>Las mejores laptops del mercado</p>
+                    <a href="#productos" class="btn">Ver Ofertas</a>
+                </div>
+            </div>
+  
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1598331668826-20cecc596b86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>Sonido Premium</h2>
+                    <p>Audífonos con cancelación de ruido</p>
+                    <a href="#productos" class="btn">Comprar Ahora</a>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>Smartphones de Última Generación</h2>
+                    <p>Conéctate con el mundo</p>
+                    <a href="#productos" class="btn">Ver Catálogo</a>
+                </div>
+            </div>
+        </section>
+
+    
+        <section id="productos" class="products-section">
+            <h2 class="section-title">Nuestros Productos Destacados</h2>
+            
+            <div class="product-grid" id="product-container">
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Laptop" class="product-img">
+                    <div class="product-info">
+                        <h3>Laptop Pro X</h3>
+                        <p class="product-price">$999.00</p>
+                        <button class="btn add-to-cart" data-name="Laptop Pro X">Añadir al Carrito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Audífonos" class="product-img">
+                    <div class="product-info">
+                        <h3>Auriculares Bass</h3>
+                        <p class="product-price">$199.00</p>
+                        <button class="btn add-to-cart" data-name="Auriculares Bass">Añadir al Carrito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Smartphone" class="product-img">
+                    <div class="product-info">
+                        <h3>Phone Z 2024</h3>
+                        <p class="product-price">$799.00</p>
+                        <button class="btn add-to-cart" data-name="Phone Z 2024">Añadir al Carrito</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Cámara" class="product-img">
+                    <div class="product-info">
+                        <h3>Cámara Mirrorless</h3>
+                        <p class="product-price">$1200.00</p>
+                        <button class="btn add-to-cart" data-name="Cámara Mirrorless">Añadir al Carrito</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <h2 class="section-title">Contáctanos</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" placeholder="juan@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="asunto">Motivo:</label>
+                    <select id="asunto">
+                        <option value="compra">Consulta de Compra</option>
+                        <option value="garantia">Garantía</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ElectroTech. Todos los derechos reservados.</p>
+        <p>Proyecto Universitario - Programación Web 1</p>
+    </footer>
+
+</body>
+</html>
