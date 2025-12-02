@@ -11,7 +11,7 @@
         <a href="#" class="logo">Fatics<span>Tech Store</span></a>
         
         <nav>
-            <ul class="menu-lista" id="menuPrincipal">
+            <ul class="MenuPrincipal" id="menuPrincipal">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
@@ -19,11 +19,11 @@
             </ul>
         </nav>
 
-        <div class="iconos-header">
-            <div class="icono-carrito" onclick="irCarrito()">
-                🛒 <span class="contador-rojo" id="contadorGlobal">0</span>
+        <div class="iconoCarritoyMH">
+            <div class="iconoCarrito" onclick="irCarrito()">
+                🛒 <span class="contador" id="contadorCarrito">0</span>
             </div>
-            <div class="btn-menu" onclick="verMenu()">☰</div>
+            <div class="btnMH" onclick="verMenu()">☰</div>
         </div>
     </header>
 
@@ -35,7 +35,7 @@
             <p>Tecnología al alcance de tus manos</p>
         </section>
 
-        <section class="contenedor-productos" id="productos">
+        <section class="Productos" id="productos">
             <h2>Nuestros Productos</h2>
             <div class="grid">
                 
@@ -44,9 +44,9 @@
                     <h3>Laptop Pro X</h3>
                     <p>$900.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Laptop Pro X')">-</button>
-                        <span id="num_laptop" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Laptop Pro X', 900)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Laptop Pro X')">-</button>
+                        <span id="numlaptop" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Laptop Pro X', 900)">+</button>
                     </div>
                 </article>
 
@@ -55,9 +55,9 @@
                     <h3>Audífonos Bass</h3>
                     <p>$150.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Audífonos Bass')">-</button>
-                        <span id="num_audio" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Audífonos Bass', 150)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Audífonos Bass')">-</button>
+                        <span id="numAudifonos" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Audífonos Bass', 150)">+</button>
                     </div>
                 </article>
 
@@ -66,9 +66,9 @@
                     <h3>Phone Z 2024</h3>
                     <p>$800.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Phone Z 2024')">-</button>
-                        <span id="num_phone" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Phone Z 2024', 800)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Phone Z 2024')">-</button>
+                        <span id="numCelular" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Phone Z 2024', 800)">+</button>
                     </div>
                 </article>
 
@@ -77,9 +77,9 @@
                     <h3>iPhone 15 Pro</h3>
                     <p>$1200.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('iPhone 15 Pro')">-</button>
-                        <span id="num_iphone" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('iPhone 15 Pro', 1200)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('iPhone 15 Pro')">-</button>
+                        <span id="numiPhone" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('iPhone 15 Pro', 1200)">+</button>
                     </div>
                 </article>
 
@@ -88,9 +88,9 @@
                     <h3>PlayStation 5</h3>
                     <p>$500.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('PlayStation 5')">-</button>
-                        <span id="num_ps5" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('PlayStation 5', 500)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('PlayStation 5')">-</button>
+                        <span id="numPS5" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('PlayStation 5', 500)">+</button>
                     </div>
                 </article>
 
@@ -99,9 +99,9 @@
                     <h3>Xbox Series X</h3>
                     <p>$500.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Xbox Series X')">-</button>
-                        <span id="num_xbox" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Xbox Series X', 500)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Xbox Series X')">-</button>
+                        <span id="numXbox" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Xbox Series X', 500)">+</button>
                     </div>
                 </article>
 
@@ -110,9 +110,9 @@
                     <h3>iPad Air</h3>
                     <p>$600.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('iPad Air')">-</button>
-                        <span id="num_ipad" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('iPad Air', 600)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('iPad Air')">-</button>
+                        <span id="numipad" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('iPad Air', 600)">+</button>
                     </div>
                 </article>
 
@@ -121,9 +121,9 @@
                     <h3>Apple Watch S9</h3>
                     <p>$400.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Apple Watch S9')">-</button>
-                        <span id="num_watch" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Apple Watch S9', 400)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Apple Watch S9')">-</button>
+                        <span id="numAppleWatch" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Apple Watch S9', 400)">+</button>
                     </div>
                 </article>
 
@@ -132,9 +132,9 @@
                     <h3>Monitor 144Hz</h3>
                     <p>$300.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Monitor 144Hz')">-</button>
-                        <span id="num_monitor" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Monitor 144Hz', 300)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Monitor 144Hz')">-</button>
+                        <span id="numMonitor" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Monitor 144Hz', 300)">+</button>
                     </div>
                 </article>
 
@@ -143,9 +143,9 @@
                     <h3>Teclado RGB</h3>
                     <p>$80.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Teclado RGB')">-</button>
-                        <span id="num_teclado" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Teclado RGB', 80)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Teclado RGB')">-</button>
+                        <span id="numTeclado" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Teclado RGB', 80)">+</button>
                     </div>
                 </article>
 
@@ -154,9 +154,9 @@
                     <h3>Mouse Pro</h3>
                     <p>$50.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Mouse Pro')">-</button>
-                        <span id="num_mouse" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Mouse Pro', 50)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Mouse Pro')">-</button>
+                        <span id="numMouse" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Mouse Pro', 50)">+</button>
                     </div>
                 </article>
 
@@ -165,9 +165,9 @@
                     <h3>Cámara 4K</h3>
                     <p>$1100.00</p>
                     <div class="controles">
-                        <button class="btn rojo" onclick="quitar('Cámara 4K')">-</button>
-                        <span id="num_camara" class="cantidad-texto">0</span>
-                        <button class="btn azul" onclick="agregar('Cámara 4K', 1100)">+</button>
+                        <button class="btnRojoQuitar" onclick="quitar('Cámara 4K')">-</button>
+                        <span id="numCamara" class="cantidadProducto">0</span>
+                        <button class="btnAzulAgregar" onclick="agregar('Cámara 4K', 1100)">+</button>
                     </div>
                 </article>
                 
@@ -183,9 +183,8 @@
             </div>
         </section>
 
-        <section class="seccion-contacto" id="contacto">
+        <section class="Contacto" id="contacto">
             <h2 style="text-align: center;">Contáctanos</h2>
-            <form onsubmit="validarFormulario(event)">
                 <div class="campo">
                     <label>Nombre:</label>
                     <input type="text" placeholder="Tu nombre" required>
@@ -206,7 +205,7 @@
                     <label>Mensaje:</label>
                     <textarea placeholder="Escribe aquí..."></textarea>
                 </div>
-                <button type="submit" class="btn azul" style="width: 100%;">Enviar</button>
+                <button type="submit" class="btnEnviar" style="width: 100%;">Enviar</button>
             </form>
         </section>
 
