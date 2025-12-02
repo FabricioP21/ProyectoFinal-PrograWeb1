@@ -11,7 +11,7 @@
         <div>Caja</div>
     </header>
 
-    <main class="caja-principal">
+    <main class="Carrito">
         
         <section>
             <h2>Resumen de Compra</h2>
@@ -25,16 +25,15 @@
                 <tbody id="cuerpoTabla">
                 </tbody>
             </table>
-            <div class="total-texto">
+            <div class="cantidadProducto">
                 Total: $<span id="textoTotal">0</span>
             </div>
         </section>
 
-        <section class="seccion-pago">
+        <section class="seccionPago">
             <h3>Datos de Envío</h3>
-            <form onsubmit="finalizarCompra(event)">
                 
-                <div class="fila-form">
+                <div class="formularioPago">
                     <div class="columna">
                         <label>Nombre Titular:</label>
                         <input type="text" id="nombre" required>
@@ -45,14 +44,14 @@
                     </div>
                 </div>
 
-                <div class="fila-form">
+                <div class="formularioPago">
                     <div class="columna">
                         <label>Dirección:</label>
                         <input type="text" required>
                     </div>
                 </div>
 
-                <div class="fila-form">
+                <div class="formularioPago">
                     <div class="columna">
                         <label>Ciudad:</label>
                         <input type="text" required>
@@ -64,13 +63,13 @@
                 </div>
 
                 <h3>Datos de Tarjeta</h3>
-                <div class="fila-form">
+                <div class="formularioPago">
                     <div class="columna">
                         <label>Número Tarjeta:</label>
                         <input type="number" placeholder="0000 0000 0000 0000" required>
                     </div>
                 </div>
-                <div class="fila-form">
+                <div class="formularioPago">
                     <div class="columna">
                         <label>Vencimiento (MM/AA):</label>
                         <input type="text" placeholder="01/26" required>
@@ -81,10 +80,10 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn-pagar">Confirmar Pago</button>
+                <button type="submit" class="btnPagar">Confirmar Pago</button>
             </form>
 
-            <a href="proyecto.html" class="btn-volver">Volver</a>
+            <a href="proyecto.html" class="btnVolver">Volver</a>
         </section>
 
     </main>
