@@ -1,137 +1,219 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ElectroTech - Tu tienda de tecnología</title>
+    <title>FaticsTech Store - Inicio</title>
 </head>
 <body>
 
     <header>
-        <a href="#" class="logo">Electro<span>Tech</span></a>
+        <a href="#" class="logo">Fatics<span>Tech Store</span></a>
         
         <nav>
-            <ul class="nav-links" id="nav-links">
+            <ul class="menu-lista" id="menuPrincipal">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
 
-        <div class="header-icons">
-            <div class="cart-icon" onclick="mostrarCarrito()">
-                🛒 <span class="cart-count" id="cart-count">0</span>
+        <div class="iconos-header">
+            <div class="icono-carrito" onclick="irCarrito()">
+                🛒 <span class="contador-rojo" id="contadorGlobal">0</span>
             </div>
-    
-            <div class="hamburger" id="hamburger">
-                ☰
-            </div>
+            <div class="btn-menu" onclick="verMenu()">☰</div>
         </div>
     </header>
 
     <main>
-       
-        <section id="inicio" class="hero">
-     
-            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>Tecnología al alcance de tus manos</h2>
-                    <p>Las mejores laptops del mercado</p>
-                    <a href="#productos" class="btn">Ver Ofertas</a>
-                </div>
-            </div>
-  
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1598331668826-20cecc596b86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>Sonido Premium</h2>
-                    <p>Audífonos con cancelación de ruido</p>
-                    <a href="#productos" class="btn">Comprar Ahora</a>
-                </div>
-            </div>
+        
+        <section class="hero" id="inicio">
+            <img src="logo.png" alt="Logo FaticsTech">
+            <h1>Bienvenido a FaticsTech Store</h1>
+            <p>Tecnología al alcance de tus manos</p>
+        </section>
 
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>Smartphones de Última Generación</h2>
-                    <p>Conéctate con el mundo</p>
-                    <a href="#productos" class="btn">Ver Catálogo</a>
-                </div>
+        <section class="contenedor-productos" id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="grid">
+                
+                <article class="producto">
+                    <img src="laptop.png" alt="Laptop">
+                    <h3>Laptop Pro X</h3>
+                    <p>$900.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Laptop Pro X')">-</button>
+                        <span id="num_laptop" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Laptop Pro X', 900)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="audifonos.png" alt="Audifonos">
+                    <h3>Audífonos Bass</h3>
+                    <p>$150.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Audífonos Bass')">-</button>
+                        <span id="num_audio" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Audífonos Bass', 150)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="celular.png" alt="Celular">
+                    <h3>Phone Z 2024</h3>
+                    <p>$800.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Phone Z 2024')">-</button>
+                        <span id="num_phone" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Phone Z 2024', 800)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="iphone.png" alt="iPhone">
+                    <h3>iPhone 15 Pro</h3>
+                    <p>$1200.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('iPhone 15 Pro')">-</button>
+                        <span id="num_iphone" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('iPhone 15 Pro', 1200)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="ps5.png" alt="PS5">
+                    <h3>PlayStation 5</h3>
+                    <p>$500.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('PlayStation 5')">-</button>
+                        <span id="num_ps5" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('PlayStation 5', 500)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="xbox.png" alt="Xbox">
+                    <h3>Xbox Series X</h3>
+                    <p>$500.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Xbox Series X')">-</button>
+                        <span id="num_xbox" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Xbox Series X', 500)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="ipad.png" alt="iPad">
+                    <h3>iPad Air</h3>
+                    <p>$600.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('iPad Air')">-</button>
+                        <span id="num_ipad" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('iPad Air', 600)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="watch.png" alt="Watch">
+                    <h3>Apple Watch S9</h3>
+                    <p>$400.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Apple Watch S9')">-</button>
+                        <span id="num_watch" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Apple Watch S9', 400)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="monitor.png" alt="Monitor">
+                    <h3>Monitor 144Hz</h3>
+                    <p>$300.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Monitor 144Hz')">-</button>
+                        <span id="num_monitor" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Monitor 144Hz', 300)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="teclado.png" alt="Teclado">
+                    <h3>Teclado RGB</h3>
+                    <p>$80.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Teclado RGB')">-</button>
+                        <span id="num_teclado" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Teclado RGB', 80)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="mouse.png" alt="Mouse">
+                    <h3>Mouse Pro</h3>
+                    <p>$50.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Mouse Pro')">-</button>
+                        <span id="num_mouse" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Mouse Pro', 50)">+</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="camara.png" alt="Camara">
+                    <h3>Cámara 4K</h3>
+                    <p>$1100.00</p>
+                    <div class="controles">
+                        <button class="btn rojo" onclick="quitar('Cámara 4K')">-</button>
+                        <span id="num_camara" class="cantidad-texto">0</span>
+                        <button class="btn azul" onclick="agregar('Cámara 4K', 1100)">+</button>
+                    </div>
+                </article>
+                
             </div>
         </section>
 
-    
-        <section id="productos" class="products-section">
-            <h2 class="section-title">Nuestros Productos Destacados</h2>
-            
-            <div class="product-grid" id="product-container">
-
-                <article class="product-card">
-                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Laptop" class="product-img">
-                    <div class="product-info">
-                        <h3>Laptop Pro X</h3>
-                        <p class="product-price">$999.00</p>
-                        <button class="btn add-to-cart" data-name="Laptop Pro X">Añadir al Carrito</button>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Audífonos" class="product-img">
-                    <div class="product-info">
-                        <h3>Auriculares Bass</h3>
-                        <p class="product-price">$199.00</p>
-                        <button class="btn add-to-cart" data-name="Auriculares Bass">Añadir al Carrito</button>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Smartphone" class="product-img">
-                    <div class="product-info">
-                        <h3>Phone Z 2024</h3>
-                        <p class="product-price">$799.00</p>
-                        <button class="btn add-to-cart" data-name="Phone Z 2024">Añadir al Carrito</button>
-                    </div>
-                </article>
-
-                <article class="product-card">
-                    <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Cámara" class="product-img">
-                    <div class="product-info">
-                        <h3>Cámara Mirrorless</h3>
-                        <p class="product-price">$1200.00</p>
-                        <button class="btn add-to-cart" data-name="Cámara Mirrorless">Añadir al Carrito</button>
-                    </div>
-                </article>
+        <section class="seccion-nosotros" id="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <div style="max-width: 800px; margin: 0 auto; color: #555; font-size: 1.1em; line-height: 1.6;">
+                <p>¡Hola! Somos FaticsTech Store. Más que una tienda de tecnología, somos un grupo de apasionados por la innovación y la tecnología. Nacimos como un proyecto universitario y hoy buscamos traerte los mejores gadgets.</p>
+                <br>
+                <p>Creemos que la tecnología debe ser accesible. Seleccionamos calidad y precio justo para ti. ¡Gracias por confiar en nosotros!</p>
             </div>
         </section>
 
-        <section id="contacto" class="contact-section">
-            <h2 class="section-title">Contáctanos</h2>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+        <section class="seccion-contacto" id="contacto">
+            <h2 style="text-align: center;">Contáctanos</h2>
+            <form onsubmit="validarFormulario(event)">
+                <div class="campo">
+                    <label>Nombre:</label>
+                    <input type="text" placeholder="Tu nombre" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" placeholder="juan@email.com" required>
+                <div class="campo">
+                    <label>Email:</label>
+                    <input type="email" placeholder="tucorreo@email.com" required>
                 </div>
-                <div class="form-group">
-                    <label for="asunto">Motivo:</label>
-                    <select id="asunto">
-                        <option value="compra">Consulta de Compra</option>
-                        <option value="garantia">Garantía</option>
-                        <option value="otro">Otro</option>
+                <div class="campo">
+                    <label>Asunto:</label>
+                    <select>
+                        <option>Consulta</option>
+                        <option>Garantía</option>
+                        <option>Otros</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                <div class="campo">
+                    <label>Mensaje:</label>
+                    <textarea placeholder="Escribe aquí..."></textarea>
                 </div>
-                <button type="submit" class="btn">Enviar Mensaje</button>
+                <button type="submit" class="btn azul" style="width: 100%;">Enviar</button>
             </form>
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 ElectroTech. Todos los derechos reservados.</p>
+        <p>&copy; 2024 FaticsTech Store. Todos los derechos reservados.</p>
         <p>Proyecto Universitario - Programación Web 1</p>
     </footer>
 
